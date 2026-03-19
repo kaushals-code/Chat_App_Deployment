@@ -55,7 +55,6 @@ function Login() {
         <div className="full">
             <div className="login-box">
                 <div className="brand">
-                    <span className="brand-icon">✦</span>
                     <span className="brand-name">Chat On Weeknd</span>
                 </div>
 
