@@ -15,16 +15,13 @@ function Login() {
     });
 
     function handleChange(event) {
-
         changeCreds((prev) => ({
             ...prev,
             [event.target.name]: event.target.value
         }));
-
     }
 
     async function handleLogin(e) {
-
         e.preventDefault();
 
         const q = query(
@@ -43,15 +40,10 @@ function Login() {
         const users = snapshot.val();
 
         for (const [uid, user] of Object.entries(users)) {
-
             if (user.password === creds.password) {
-
                 setDBUser(uid);
-
                 console.log("Logged in UID:", uid);
-
                 navigate("/dashboard");
-
                 return;
             }
         }
@@ -62,30 +54,46 @@ function Login() {
     return (
         <div className="full">
             <div className="login-box">
-                <h1>Login here</h1>
+                <div className="brand">
+                    <span className="brand-icon">✦</span>
+                    <span className="brand-name">Chat On Weeknd</span>
+                </div>
 
-                <input
-                    type="text"
-                    name="username"
-                    placeholder="Username"
-                    value={creds.username}
-                    onChange={handleChange}
-                />
+                <div className="login-header">
+                    <h1>Welcome back</h1>
+                    <p className="login-subtitle">Sign in to continue</p>
+                </div>
 
-                <input
-                    type="password"
-                    name="password"
-                    placeholder="Password"
-                    value={creds.password}
-                    onChange={handleChange}
-                />
+                <div className="input-group">
+                    <label htmlFor="username">Username</label>
+                    <input
+                        id="username"
+                        type="text"
+                        name="username"
+                        placeholder="Enter your username"
+                        value={creds.username}
+                        onChange={handleChange}
+                    />
+                </div>
 
-                <button onClick={handleLogin}>Log in!</button>
+                <div className="input-group">
+                    <label htmlFor="password">Password</label>
+                    <input
+                        id="password"
+                        type="password"
+                        name="password"
+                        placeholder="Enter your password"
+                        value={creds.password}
+                        onChange={handleChange}
+                    />
+                </div>
 
-                <button onClick={() => navigate("/newreg")}>
-                    New? Sign up!
-                </button>
-
+                <div className="button-group">
+                    <button className="btn-primary" onClick={handleLogin}>Log in</button>
+                    <button className="btn-secondary" onClick={() => navigate("/newreg")}>
+                        New here? <span>Sign up</span>
+                    </button>
+                </div>
             </div>
         </div>
     );
