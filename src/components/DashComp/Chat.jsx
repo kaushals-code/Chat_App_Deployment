@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { ref, onValue, get } from "firebase/database";
 import { db } from "../../firebase";
 import { getDBUser } from "../../Auth";
-import { sendMessage } from "../../services/chatService";
+import { sendMessage } from "../../services/chatservice";
 import ChatHeader from "./ChatHeader";
 import ChatInput from "./ChatInput";
 import ChatMessage from "./ChatMessage";
