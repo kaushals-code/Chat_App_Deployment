@@ -2,7 +2,7 @@ import React, { useEffect, useState, useMemo } from "react";
 import { ref, get } from "firebase/database";
 import { db } from "../../firebase";
 import { getDBUser } from "../../Auth";
-import { createChat } from "../../services/chatService";
+import { createChat } from "../../services/chatservice";
 
 import SidebarHeader from "./SidebarHeader";
 import SidebarSearch from "./SidebarSearch";
