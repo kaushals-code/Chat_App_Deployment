@@ -44,7 +44,6 @@ function NewReg() {
             <div className="login-box">
 
                 <div className="brand">
-                    <span className="brand-icon">✦</span>
                     <span className="brand-name">Chat On Weeknd</span>
                 </div>
 
@@ -64,7 +63,7 @@ function NewReg() {
                     />
                 </div>
 
-                <div className="input-group">
+                {/* <div className="input-group">
                     <label htmlFor="email">Email</label>
                     <input
                         id="email"
@@ -73,8 +72,8 @@ function NewReg() {
                         placeholder="Your email address"
                         onChange={handleChange}
                     />
-                </div>
-
+                </div> */}
+                {/* 
                 <div className="input-group">
                     <label htmlFor="phone">Phone</label>
                     <input
@@ -84,7 +83,7 @@ function NewReg() {
                         placeholder="Your phone number"
                         onChange={handleChange}
                     />
-                </div>
+                </div> */}
 
                 <div className="input-group">
                     <label htmlFor="password">Password</label>
