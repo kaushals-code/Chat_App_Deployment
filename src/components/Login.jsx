@@ -6,7 +6,6 @@ import { useNavigate } from "react-router-dom";
 import { ref, query, orderByChild, equalTo, get } from "firebase/database";
 
 function Login() {
-
     const navigate = useNavigate();
 
     const [creds, changeCreds] = useState({
